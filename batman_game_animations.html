@@ -240,6 +240,35 @@
       margin-top: 16px;
     }
 
+    .asset-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .asset-link {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 132px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      text-decoration: none;
+    }
+
+    .asset-link strong {
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .asset-link span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .source {
       padding: 10px 12px;
       border: 1px solid var(--line);
@@ -262,6 +291,7 @@
       .hero { padding: 72px 0 30px; }
       .card,
       .card.wide { grid-column: span 12; }
+      .asset-list { grid-template-columns: 1fr; }
       .sources { grid-template-columns: 1fr; }
     }
   </style>
@@ -281,6 +311,7 @@
       <a class="pill" href="#injustice2">不义联盟 2</a>
       <a class="pill" href="#gods">不义联盟：人间之神</a>
       <a class="pill" href="#gifs">GIF 动图</a>
+      <a class="pill" href="#external-assets">外部动作素材</a>
       <a class="pill" href="#timeline">剧情时间线表演</a>
       <a class="pill" href="#sources">来源</a>
     </nav>
@@ -475,6 +506,73 @@
       </div>
     </section>
 
+    <section class="section" id="external-assets">
+      <h2>外部动作素材</h2>
+      <p>追加 ArtStation、Pinterest、Tenor 等平台上的蝙蝠侠攻击动画、技能道具、必杀技和战斗姿势素材索引。这里保留原站链接，适合打开后收藏、截图参考或联系作者授权。</p>
+      <div class="asset-list">
+        <a class="asset-link" href="https://www.artstation.com/artwork/8wwnJO?album_id=608180" target="_blank" rel="noreferrer">
+          <strong>ArtStation：Batman vs Deathstroke fight animation</strong>
+          <span>3D 战斗动画，包含近身攻击、格挡、连击节奏和角色运动参考。</span>
+          <span>标签：攻击动画 / 格斗 / Blender / After Effects</span>
+        </a>
+        <a class="asset-link" href="https://jgraybeal.artstation.com/projects/8akJE" target="_blank" rel="noreferrer">
+          <strong>ArtStation：Injustice 2 Batwing、Batmobile、Batarang</strong>
+          <span>官方项目美术资产，适合做技能道具、蝙蝠镖、必杀技载具镜头参考。</span>
+          <span>标签：技能图片 / Batarang / Batmobile / Super Move</span>
+        </a>
+        <a class="asset-link" href="https://www.artstation.com/artwork/PXd0vn" target="_blank" rel="noreferrer">
+          <strong>ArtStation：Batman vs Joker 2D animation</strong>
+          <span>2D 动画模板方向，可参考角色入场、对峙、攻击前摇和 UI 化演出。</span>
+          <span>标签：2D 动画 / 出场 / 对战表演</span>
+        </a>
+        <a class="asset-link" href="https://umarcga.artstation.com/projects/A94KJq" target="_blank" rel="noreferrer">
+          <strong>ArtStation：Batman custom rig mocap animation</strong>
+          <span>自定义骨骼和动捕动画演示，适合看披风、走位、动作衔接和镜头节奏。</span>
+          <span>标签：角色动画 / 动捕 / 披风 / Batmobile</span>
+        </a>
+        <a class="asset-link" href="https://isosmrt.artstation.com/projects/oOLxnO" target="_blank" rel="noreferrer">
+          <strong>ArtStation：Batman V Superman VFX animation work</strong>
+          <span>VFX 动画片段，适合参考技能光效、冲击感、电影化攻击镜头。</span>
+          <span>标签：VFX / 技能光效 / 电影动作</span>
+        </a>
+        <a class="asset-link" href="https://www.artstation.com/search?sort_by=relevance&query=batman%20attack%20animation" target="_blank" rel="noreferrer">
+          <strong>ArtStation 搜索：Batman attack animation</strong>
+          <span>持续更新的关键词结果，适合继续找攻击 GIF、战斗动画和动作分镜。</span>
+          <span>标签：搜索入口 / 攻击动画 / 动作素材</span>
+        </a>
+        <a class="asset-link" href="https://www.pinterest.com/search/pins/?q=batman%20attack%20animation%20gif" target="_blank" rel="noreferrer">
+          <strong>Pinterest：Batman attack animation GIF</strong>
+          <span>动图和短循环参考入口，适合找拳击、踢击、披风动作和攻击节奏。</span>
+          <span>标签：GIF / 攻击 / Pinterest</span>
+        </a>
+        <a class="asset-link" href="https://www.pinterest.com/search/pins/?q=batman%20fighting%20pose%20attack%20art" target="_blank" rel="noreferrer">
+          <strong>Pinterest：Batman fighting pose attack art</strong>
+          <span>攻击姿势、漫画分镜、技能前摇/后摇姿态参考。</span>
+          <span>标签：攻击图片 / 姿势 / 分镜</span>
+        </a>
+        <a class="asset-link" href="https://tenor.com/search/batman-punching-gifs" target="_blank" rel="noreferrer">
+          <strong>Tenor：Batman punching GIFs</strong>
+          <span>拳击和打击类动图入口，适合补攻击循环和演示卡片。</span>
+          <span>标签：GIF / Punch / Fight</span>
+        </a>
+        <a class="asset-link" href="https://tenor.com/search/injustice-batman-gifs" target="_blank" rel="noreferrer">
+          <strong>Tenor：Injustice Batman GIFs</strong>
+          <span>不义联盟相关动图入口，适合找 Clash、攻击、必杀技气氛素材。</span>
+          <span>标签：GIF / Injustice / 必杀技</span>
+        </a>
+        <a class="asset-link" href="https://injustice.fandom.com/wiki/Super_Moves" target="_blank" rel="noreferrer">
+          <strong>Injustice Wiki：Super Moves</strong>
+          <span>Batman 在 Injustice 2 中的 Bat of Gotham 描述，可辅助筛选必杀技 GIF 和图片。</span>
+          <span>标签：必杀技 / 技能说明 / Bat of Gotham</span>
+        </a>
+        <a class="asset-link" href="https://en.wikipedia.org/wiki/Batarang" target="_blank" rel="noreferrer">
+          <strong>Batarang 资料：技能道具参考</strong>
+          <span>蝙蝠镖是 Batman 远程攻击核心道具，可配合 ArtStation/Pinterest 图片做技能素材分类。</span>
+          <span>标签：技能图片 / 道具 / 远程攻击</span>
+        </a>
+      </div>
+    </section>
+
     <section class="section" id="timeline">
       <h2>剧情时间线表演</h2>
       <p>如果你要剪“时间线表演”，建议按剧情节点和战斗动作分镜来取材。</p>
@@ -525,6 +623,10 @@
         <a class="source" href="https://tenor.com/view/batman-injustice-gif-8123565" target="_blank" rel="noreferrer">Tenor：Batman Injustice GIF</a>
         <a class="source" href="https://tenor.com/view/injustice-injustice2-batman-dc-gif-10646698" target="_blank" rel="noreferrer">Tenor：Injustice 2 Batman GIF</a>
         <a class="source" href="https://gifdb.com/gif/hop-on-marvel-rivals-moon-knight-gif-6etzjptq3ofhmut4.html" target="_blank" rel="noreferrer">GIFDB：Marvel Rivals Moon Knight GIF</a>
+        <a class="source" href="https://www.artstation.com/artwork/8wwnJO?album_id=608180" target="_blank" rel="noreferrer">ArtStation：Batman vs Deathstroke fight animation</a>
+        <a class="source" href="https://jgraybeal.artstation.com/projects/8akJE" target="_blank" rel="noreferrer">ArtStation：Injustice 2 Batman Batwing、Batmobile、Batarang</a>
+        <a class="source" href="https://www.pinterest.com/search/pins/?q=batman%20attack%20animation%20gif" target="_blank" rel="noreferrer">Pinterest：Batman attack animation GIF 搜索</a>
+        <a class="source" href="https://tenor.com/search/batman-punching-gifs" target="_blank" rel="noreferrer">Tenor：Batman punching GIFs</a>
       </div>
     </section>
   </main>
