@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>蝙蝠侠游戏动画与技能素材</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111317;
+      --panel: #1a1e25;
+      --panel-2: #222734;
+      --text: #f3f5f7;
+      --muted: #aab2c0;
+      --line: #343b4a;
+      --accent: #ffd65a;
+      --accent-2: #66d9ef;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(rgba(17, 19, 23, .36), rgba(17, 19, 23, .92)),
+        url("https://static.deltiasgaming.com/2025/01/Batman-and-Wonder-Woman-in-Marvel-Rivals.png") center / cover;
+      min-height: 54vh;
+      display: grid;
+      align-items: end;
+    }
+
+    .hero {
+      padding: 96px 0 44px;
+      max-width: 860px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(36px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: #dce2ea;
+      font-size: 18px;
+      max-width: 760px;
+    }
+
+    .notice {
+      margin: 22px 0 0;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 214, 90, .45);
+      background: rgba(255, 214, 90, .10);
+      border-radius: 8px;
+      color: #fff2bd;
+    }
+
+    main { padding: 34px 0 56px; }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .section {
+      margin: 36px 0 46px;
+      padding-top: 4px;
+    }
+
+    .section h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .section > p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      grid-column: span 6;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card.wide { grid-column: span 12; }
+
+    .media {
+      display: block;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #07080a;
+      overflow: hidden;
+    }
+
+    .media img,
+    .media iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      object-fit: cover;
+    }
+
+    .media.gif {
+      background: #10131a;
+    }
+
+    .media.gif iframe {
+      background: transparent;
+    }
+
+    .play {
+      position: absolute;
+      inset: auto 14px 14px auto;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .72);
+      color: white;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .body {
+      padding: 16px;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .body p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: #d3d9e4;
+      background: var(--panel-2);
+      font-size: 12px;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--line);
+      padding-left: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .point {
+      position: relative;
+      padding: 14px 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .point::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 21px;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      box-shadow: 0 0 0 4px var(--bg);
+    }
+
+    .point strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .sources {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .source {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(255, 255, 255, .025);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 22px, 1180px); }
+      header { min-height: 58vh; }
+      .hero { padding: 72px 0 30px; }
+      .card,
+      .card.wide { grid-column: span 12; }
+      .sources { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <h1>蝙蝠侠出场、技能与剧情表演素材</h1>
+      <p class="lead">聚合《漫威争锋》玩家 Mod、《不义联盟 2》和《不义联盟：人间之神》中与蝙蝠侠相关的图片、视频、攻击技能和剧情/时间线表现。</p>
+      <div class="notice">检索结论：截至本次搜索，《漫威争锋》没有官方蝙蝠侠角色；相关素材来自玩家 Mod，通常是把 Moon Knight 替换为 Batman，所以技能表现本质上仍是 Moon Knight 的技能组。</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="toolbar" aria-label="页面导航">
+      <a class="pill" href="#rivals">漫威争锋 Mod</a>
+      <a class="pill" href="#injustice2">不义联盟 2</a>
+      <a class="pill" href="#gods">不义联盟：人间之神</a>
+      <a class="pill" href="#gifs">GIF 动图</a>
+      <a class="pill" href="#timeline">剧情时间线表演</a>
+      <a class="pill" href="#sources">来源</a>
+    </nav>
+
+    <section class="section" id="rivals">
+      <h2>漫威争锋：Batman / Moon Knight Mod</h2>
+      <p>非官方素材重点看“模型替换”和 Moon Knight 的技能演示：钩爪、滑翔、弹射飞镖、月刃、Ankh 聚怪和 Hand of Khonshu 终极技。</p>
+      <div class="grid">
+        <article class="card">
+          <a class="media" href="https://deltiasgaming.com/how-to-add-batman-and-wonder-woman-to-marvel-rivals/" target="_blank" rel="noreferrer">
+            <img src="https://static.deltiasgaming.com/2025/01/Batman-and-Wonder-Woman-in-Marvel-Rivals.png" alt="Marvel Rivals 中 Batman 和 Wonder Woman Mod 截图">
+            <span class="play">打开图文</span>
+          </a>
+          <div class="body">
+            <p class="kicker">图片 / Mod 展示</p>
+            <h3>Batman 与 Wonder Woman 加入 Marvel Rivals 的玩家 Mod</h3>
+            <p>图文来源说明该 DC 角色包把 Moon Knight 重做为 Batman，属于皮肤/模型替换，不改原角色技能与数值。</p>
+            <div class="tags">
+              <span class="tag">非官方</span>
+              <span class="tag">Moon Knight 替换</span>
+              <span class="tag">出场视觉</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="media" href="https://www.marvel.com/watch/trailers-and-extras/moon-knight-fist-of-khonshu-character-reveal-marvel-rivals" target="_blank" rel="noreferrer">
+            <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/11/moon-knight-spreading-his-wings-and-soaring-into-action-in-marvel-rivals.jpg" alt="Marvel Rivals Moon Knight 展开斗篷滑翔">
+            <span class="play">打开视频</span>
+          </a>
+          <div class="body">
+            <p class="kicker">视频 / 技能参考</p>
+            <h3>Moon Knight 官方角色展示</h3>
+            <p>如果使用 Batman Mod，画面中的攻击逻辑仍对应 Moon Knight：Crescent Dart、Moon Blade、Ancient Ankh、Moonlight Hook、Night Glider 与终极技。</p>
+            <div class="tags">
+              <span class="tag">攻击技能</span>
+              <span class="tag">滑翔</span>
+              <span class="tag">终极技</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="injustice2">
+      <h2>不义联盟 2：Batman 动画与技能</h2>
+      <p>这里的素材覆盖角色出场对白、Clash 台词、超必杀、胜利姿势和角色技能数据。</p>
+      <div class="grid">
+        <article class="card">
+          <a class="media" href="https://www.youtube.com/watch?v=g83kxmIqnSw" target="_blank" rel="noreferrer">
+            <img src="https://img.youtube.com/vi/g83kxmIqnSw/hqdefault.jpg" alt="Injustice 2 Batman intro dialogue, clash quotes and super moves">
+            <span class="play">在 YouTube 观看</span>
+          </a>
+          <div class="body">
+            <p class="kicker">视频 / 出场与 Clash</p>
+            <h3>Bruce Wayne Vs Batman：出场对白、Clash、超必杀</h3>
+            <p>适合截取开场镜头、角色交锋台词、Clash 镜头和胜利/终结表现。</p>
+            <div class="tags">
+              <span class="tag">出场动画</span>
+              <span class="tag">Clash</span>
+              <span class="tag">胜利姿势</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="media" href="https://www.youtube.com/watch?v=BmfNFph7TDs" target="_blank" rel="noreferrer">
+            <img src="https://img.youtube.com/vi/BmfNFph7TDs/hqdefault.jpg" alt="Injustice 2 Batman performs all super moves">
+            <span class="play">在 YouTube 观看</span>
+          </a>
+          <div class="body">
+            <p class="kicker">视频 / 超必杀</p>
+            <h3>Batman 执行多角色 Super Move 演示</h3>
+            <p>该视频偏 Mod/演示向，可作为动作镜头参考；正式技能仍以 Batman 自身的 Bat of Gotham 和游戏内招式为准。</p>
+            <div class="tags">
+              <span class="tag">Super Move</span>
+              <span class="tag">动作参考</span>
+              <span class="tag">演示视频</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card wide">
+          <div class="body">
+            <p class="kicker">技能速览</p>
+            <h3>Batman 的核心攻击表现</h3>
+            <p>《不义联盟 2》中 Batman 的超必杀名为 Bat of Gotham；角色玩法围绕 Batarang、Grapple、Cape Parry、Mechanical Bats 等道具型攻击展开。技能数据与连段建议可查 Samurai Gamers 的角色指南。</p>
+            <div class="tags">
+              <span class="tag">Batarang</span>
+              <span class="tag">Grapple</span>
+              <span class="tag">Cape Parry</span>
+              <span class="tag">Mechanical Bats</span>
+              <span class="tag">Bat of Gotham</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="gods">
+      <h2>不义联盟：人间之神</h2>
+      <p>第一代素材更适合看“经典 Batman 道具格斗”的动作设计：抓钩、蝙蝠镖、披风反击、机械蝙蝠和 Batmobile 参与的超必杀。</p>
+      <div class="grid">
+        <article class="card">
+          <a class="media" href="https://www.youtube.com/watch?v=BtefCWctsNM" target="_blank" rel="noreferrer">
+            <img src="https://img.youtube.com/vi/BtefCWctsNM/hqdefault.jpg" alt="Injustice Gods Among Us Batman all special moves, meter burns, and supermoves">
+            <span class="play">在 YouTube 观看</span>
+          </a>
+          <div class="body">
+            <p class="kicker">视频 / 攻击技能</p>
+            <h3>Batman 全特殊技、Meter Burn 与 Super Move</h3>
+            <p>适合看 Straight Grapple、Sky Grapple、Batarang、Cape Parry、Mechanical Bats 和 The Dark Knight 超必杀。</p>
+            <div class="tags">
+              <span class="tag">攻击技能</span>
+              <span class="tag">Meter Burn</span>
+              <span class="tag">The Dark Knight</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="media" href="https://www.cbr.com/batman-performs-everyones-injustice-gods-among-us-intros/" target="_blank" rel="noreferrer">
+            <img src="https://i.ytimg.com/vi/BtefCWctsNM/maxresdefault.jpg" alt="Injustice Gods Among Us Batman 技能视频缩略图">
+            <span class="play">打开介绍</span>
+          </a>
+          <div class="body">
+            <p class="kicker">图文 / 出场表演</p>
+            <h3>Batman 表演全角色入场动画</h3>
+            <p>CBR 介绍了玩家让 Batman 套用全角色入场演出的趣味视频，适合寻找“出场动画/表演”方向的二创素材线索。</p>
+            <div class="tags">
+              <span class="tag">出场动画</span>
+              <span class="tag">表演</span>
+              <span class="tag">二创演示</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="gifs">
+      <h2>GIF 动图</h2>
+      <p>补充适合快速预览动作节奏的动图素材：包括 Injustice/Batman 游戏动图、Injustice 2 Batman 氛围动图，以及 Marvel Rivals/Moon Knight 动图索引。</p>
+      <div class="grid">
+        <article class="card">
+          <div class="media gif">
+            <iframe src="https://tenor.com/embed/8123565" title="Batman Injustice GIF" allowfullscreen></iframe>
+          </div>
+          <div class="body">
+            <p class="kicker">GIF / Injustice</p>
+            <h3>Batman Injustice 游戏动图</h3>
+            <p>Tenor 上的 Batman/Injustice 游戏动图，可作为蝙蝠侠战斗镜头的轻量预览素材。</p>
+            <div class="tags">
+              <span class="tag">GIF</span>
+              <span class="tag">Batman</span>
+              <span class="tag">Injustice</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media gif">
+            <iframe src="https://tenor.com/embed/10646698" title="Injustice 2 Batman GIF" allowfullscreen></iframe>
+          </div>
+          <div class="body">
+            <p class="kicker">GIF / Injustice 2</p>
+            <h3>Injustice 2 Batman 动图</h3>
+            <p>红色光效中的 Batman 动图，适合放在“出场氛围/角色展示”位置。</p>
+            <div class="tags">
+              <span class="tag">GIF</span>
+              <span class="tag">Injustice 2</span>
+              <span class="tag">出场氛围</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card wide">
+          <a class="media" href="https://gifdb.com/gif/hop-on-marvel-rivals-moon-knight-gif-6etzjptq3ofhmut4.html" target="_blank" rel="noreferrer">
+            <img src="https://gifdb.com/images/high/hop-on-marvel-rivals-moon-knight-gif-6etzjptq3ofhmut4.gif" alt="Marvel Rivals Moon Knight GIF">
+            <span class="play">打开 GIF</span>
+          </a>
+          <div class="body">
+            <p class="kicker">GIF / Marvel Rivals</p>
+            <h3>Moon Knight 动图素材索引</h3>
+            <p>Marvel Rivals 没有官方 Batman；这里补 Moon Knight 动图作为 Batman Mod 的技能表现参考。如果直链加载失败，点击卡片可打开 GIFDB 原页面。</p>
+            <div class="tags">
+              <span class="tag">GIF</span>
+              <span class="tag">Moon Knight</span>
+              <span class="tag">Batman Mod 参考</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <h2>剧情时间线表演</h2>
+      <p>如果你要剪“时间线表演”，建议按剧情节点和战斗动作分镜来取材。</p>
+      <div class="timeline">
+        <div class="point">
+          <strong>Injustice: Gods Among Us</strong>
+          Batman 与 Insurgency 对抗 Superman Regime，是第一代剧情主轴；战斗表现集中在机械蝙蝠、抓钩和 Batmobile 超必杀。
+        </div>
+        <div class="point">
+          <strong>Injustice 2 Chapter 1: Godfall</strong>
+          Batman 追踪 Superman，章节对手包含 Cyborg、Wonder Woman、Superman 和 Robin，适合截取剧情过场与角色冲突。
+        </div>
+        <div class="point">
+          <strong>Injustice 2 Chapter 12: Batman Path</strong>
+          结局分支包含 Batman 路线，可从完整过场视频中定位终局表演。
+        </div>
+        <div class="point">
+          <strong>Marvel Rivals Mod</strong>
+          没有官方 Batman 时间线；可用 Batman 皮肤套 Moon Knight 的 MVP、技能击杀与移动镜头做“假想参战”演示。
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <article class="card wide">
+          <a class="media" href="https://www.youtube.com/watch?v=_gbnquwhrs0" target="_blank" rel="noreferrer">
+            <img src="https://img.youtube.com/vi/_gbnquwhrs0/hqdefault.jpg" alt="Injustice 2 all cutscenes full story">
+            <span class="play">在 YouTube 观看</span>
+          </a>
+          <div class="body">
+            <p class="kicker">视频 / 完整剧情</p>
+            <h3>Injustice 2 全剧情过场</h3>
+            <p>可按章节时间点截取 Batman 的剧情表演，尤其是 Chapter 1 和最终 Batman Path。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <h2>来源链接</h2>
+      <p>页面中的素材卡片都保留跳转链接，下面是主要文字来源。</p>
+      <div class="sources">
+        <a class="source" href="https://www.nexusmods.com/marvelrivals/mods/1264?file_id=3292" target="_blank" rel="noreferrer">Nexus Mods：Batman (Injustice) as Moon Knight</a>
+        <a class="source" href="https://deltiasgaming.com/how-to-add-batman-and-wonder-woman-to-marvel-rivals/" target="_blank" rel="noreferrer">Deltia's Gaming：如何添加 Batman 与 Wonder Woman Mod</a>
+        <a class="source" href="https://www.marvel.com/watch/trailers-and-extras/moon-knight-fist-of-khonshu-character-reveal-marvel-rivals" target="_blank" rel="noreferrer">Marvel：Moon Knight 角色展示视频</a>
+        <a class="source" href="https://samurai-gamers.com/injustice-2/batman-character-guide/" target="_blank" rel="noreferrer">Samurai Gamers：Injustice 2 Batman 角色指南</a>
+        <a class="source" href="https://www.gamepressure.com/injusticegodsamongus/batman/zf4dfa" target="_blank" rel="noreferrer">Gamepressure：Injustice Batman 技能与超必杀</a>
+        <a class="source" href="https://www.cbr.com/batman-performs-everyones-injustice-gods-among-us-intros/" target="_blank" rel="noreferrer">CBR：Batman 表演全角色入场动画</a>
+        <a class="source" href="https://tenor.com/view/batman-injustice-gif-8123565" target="_blank" rel="noreferrer">Tenor：Batman Injustice GIF</a>
+        <a class="source" href="https://tenor.com/view/injustice-injustice2-batman-dc-gif-10646698" target="_blank" rel="noreferrer">Tenor：Injustice 2 Batman GIF</a>
+        <a class="source" href="https://gifdb.com/gif/hop-on-marvel-rivals-moon-knight-gif-6etzjptq3ofhmut4.html" target="_blank" rel="noreferrer">GIFDB：Marvel Rivals Moon Knight GIF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">整理时间：2026-05-27。外部图片与视频来自各原始页面，仅作素材索引用途。</div>
+  </footer>
+</body>
+</html>
